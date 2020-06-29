@@ -1,0 +1,4 @@
+#Mon Jun 29 17:33:34 BRT 2020
+base.0=/home/bufelli/Documents/dev_projects/favorite_youtube/build/app/intermediates/dex/debug/mergeDexDebug/out/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
