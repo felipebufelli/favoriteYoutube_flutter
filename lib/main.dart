@@ -1,4 +1,5 @@
 import 'package:bloc_pattern/bloc_pattern.dart';
+import 'package:favorite_youtube/bloc/favorite_bloc.dart';
 import 'package:favorite_youtube/bloc/videos_bloc.dart';
 
 import 'ui/splash_screen.dart';
@@ -14,10 +15,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocProvider(
         bloc: VideosBloc(),
-        child: MaterialApp(
+        child: BlocProvider(
+          bloc: FavoriteBloc(),
+          child: MaterialApp(
           title: "Favorite Youtube",
           home: Splash(),
           debugShowCheckedModeBanner: false,
-        ));
+        ),
+        ),
+    );
   }
 }
