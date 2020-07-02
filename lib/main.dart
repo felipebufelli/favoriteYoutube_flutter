@@ -5,10 +5,19 @@ import 'ui/splash_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(BlocProvider(
-      bloc: VideosBloc(),
-      child: MaterialApp(
-        home: Splash(),
-        debugShowCheckedModeBanner: false,
-      )));
+
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider(
+        bloc: VideosBloc(),
+        child: MaterialApp(
+          title: "Favorite Youtube",
+          home: Splash(),
+          debugShowCheckedModeBanner: false,
+        ));
+  }
 }

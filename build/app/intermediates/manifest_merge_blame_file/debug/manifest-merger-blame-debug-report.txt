@@ -26,7 +26,7 @@
 23        android:name="io.flutter.app.FlutterApplication"
 23-->/home/bufelli/Documents/dev_projects/favorite_youtube/android/app/src/main/AndroidManifest.xml:9:9-57
 24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-24-->[androidx.core:core:1.0.0] /home/bufelli/.gradle/caches/transforms-2/files-2.1/0a271e99b6771ad4a84318244d532fb7/core-1.0.0/AndroidManifest.xml:22:18-86
+24-->[androidx.core:core:1.1.0] /home/bufelli/.gradle/caches/transforms-2/files-2.1/a528b13ac93e64cafa3d0480e2c93207/core-1.1.0/AndroidManifest.xml:24:18-86
 25        android:debuggable="true"
 26        android:icon="@mipmap/ic_launcher"
 26-->/home/bufelli/Documents/dev_projects/favorite_youtube/android/app/src/main/AndroidManifest.xml:11:9-43
@@ -67,6 +67,14 @@
 46-->/home/bufelli/Documents/dev_projects/favorite_youtube/android/app/src/main/AndroidManifest.xml:27:13-44
 47            android:value="2" />
 47-->/home/bufelli/Documents/dev_projects/favorite_youtube/android/app/src/main/AndroidManifest.xml:28:13-30
-48    </application>
-49
-50</manifest>
+48
+49        <activity
+49-->[:flutter_youtube] /home/bufelli/Documents/dev_projects/favorite_youtube/build/flutter_youtube/intermediates/library_manifest/debug/AndroidManifest.xml:9:9-12:20
+50            android:name="io.github.ponnamkarthik.flutteryoutube.PlayerActivity"
+50-->[:flutter_youtube] /home/bufelli/Documents/dev_projects/favorite_youtube/build/flutter_youtube/intermediates/library_manifest/debug/AndroidManifest.xml:10:13-81
+51            android:configChanges="orientation|screenSize|keyboardHidden|navigation" >
+51-->[:flutter_youtube] /home/bufelli/Documents/dev_projects/favorite_youtube/build/flutter_youtube/intermediates/library_manifest/debug/AndroidManifest.xml:11:13-85
+52        </activity>
+53    </application>
+54
+55</manifest>

@@ -12,15 +12,12 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
+
+    final bloc =  BlocProvider.of<VideosBloc>(context);
+
     return Scaffold(
       appBar: AppBar(
-        title: Container(
-          height: 45,
-          child: Image.asset(
-            'images/logo_home.png',
-            fit: BoxFit.contain,
-          ),
-        ),
+        title: Image.asset('images/logo_home.png'),
         elevation: 0,
         backgroundColor: Colors.black87,
         actions: <Widget>[
@@ -44,7 +41,7 @@ class _HomeState extends State<Home> {
             onPressed: () async {
               String result = await showSearch(context: context, delegate: DataSearch());
               if(result != null) {
-                BlocProvider.of<VideosBloc>(context).inSearch.add(result);
+                bloc.inSearch.add(result);
               }
             },
           ),
@@ -52,14 +49,27 @@ class _HomeState extends State<Home> {
       ),
       backgroundColor: Colors.black87,
       body: StreamBuilder(
-        stream: BlocProvider.of<VideosBloc>(context).outVideos,
+        stream: bloc.outVideos,
+        initialData: [],
         builder: (context, snapshot) {
           if(snapshot.hasData) {
             return ListView.builder(
               itemBuilder: (context, index) {
-                return VideoTile(snapshot.data[index]);
+                if(index < snapshot.data.length) {
+                  return VideoTile(snapshot.data[index]);
+                } else if(index > 1) {
+                  bloc.inSearch.add(null);
+                  return Container(
+                    height: 40.0,
+                    width: 40.0,
+                    alignment: Alignment.center,
+                    child: CircularProgressIndicator(valueColor: AlwaysStoppedAnimation<Color>(Colors.red),),
+                  );
+                } else {
+                  return Container();
+                }
               },
-              itemCount: snapshot.data.lenght,
+              itemCount: snapshot.data.length + 1,
             );
           } else {
             return Container();
