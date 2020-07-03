@@ -3,6 +3,7 @@ import 'package:favorite_youtube/bloc/favorite_bloc.dart';
 import 'package:favorite_youtube/bloc/videos_bloc.dart';
 import 'package:favorite_youtube/delegates/data_search.dart';
 import 'package:favorite_youtube/models/video.dart';
+import 'package:favorite_youtube/ui/favorites.dart';
 import 'package:favorite_youtube/widgets/video_tile.dart';
 import 'package:flutter/material.dart';
 
@@ -39,7 +40,9 @@ class _HomeState extends State<Home> {
           IconButton(
             icon: Icon(Icons.star), 
             onPressed: (){
-              
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (context) => Favorites())
+              );
             },
           ),
           IconButton(
