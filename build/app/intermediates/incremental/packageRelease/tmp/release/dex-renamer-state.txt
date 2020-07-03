@@ -1,0 +1,4 @@
+#Fri Jul 03 14:14:01 BRT 2020
+base.0=/home/bufelli/Documents/dev_projects/favorite_youtube/build/app/intermediates/transforms/r8/release/0/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex

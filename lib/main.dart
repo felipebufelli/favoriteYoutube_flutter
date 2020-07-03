@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
         child: BlocProvider(
           bloc: FavoriteBloc(),
           child: MaterialApp(
-          title: "Favorite Youtube",
+          title: "Youtube Favorites",
           home: Splash(),
           debugShowCheckedModeBanner: false,
         ),
